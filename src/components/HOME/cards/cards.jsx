@@ -34,7 +34,7 @@ function Card () {
         }
 
         const response = await axios.get(
-          'http://localhost:3000/place/getAllPlaces',
+          'http://localhost:3000/place/getAllPlaces?limit=4',
           {
             params: queryObj
           }
@@ -74,7 +74,7 @@ function Card () {
               <div className='col-lg-3 col-sm-6'>
                 <div className='accomodation_item text-center'>
                   <div className='hotel_img'>
-                    <img src={card.imageCover} alt='' />
+                    <img src={card.imageCover} style={{width: '100%', height: '100%'}}  alt='' />
                     <button
                       to='Mydeatails'
                       className='btn theme_btn button_hover'

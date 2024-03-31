@@ -1,14 +1,14 @@
-import { useRef, useEffect, useState  } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import images from './images'
 import './Mydeatails.css'
-import { useLocation , useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 function Mydeatails () {
   const carsuelRef = useRef()
   const [width, setWidth] = useState(0)
   const loc = useLocation()
   const data = loc.state
-  console.log(data);
+  console.log(data)
   // const param = useParams()
   // console.log(param);
   useEffect(() => {
@@ -27,12 +27,11 @@ function Mydeatails () {
           dragConstraints={{ right: 0, left: -width }}
           className='inner-carsuel'
         >
-          {(data.pictures_url).map(img => (
+          {data.pictures_url.map(img => (
             <motion.div className='item' key={img}>
-             
-             {/* const img = 'image.jpg'; */}
+              {/* const img = 'image.jpg'; */}
 
-<img src={`https://localhost:3000/images/${img}`} alt='Hotel' />
+              <img src={img} alt='Hotel' />
             </motion.div>
           ))}
         </motion.div>
@@ -165,74 +164,74 @@ function Mydeatails () {
 
 export default Mydeatails
 // accommodates
-// : 
+// :
 // 6
 // amenities
-// : 
+// :
 // ['Air conditioning,TV,Cable TV,Long term stays allowed,Heating,Elevator,Wifi,Washer,Kitchen,Pool,Dryer']
 // bedrooms
-// : 
+// :
 // 3
 // beds
-// : 
+// :
 // 4
 // createdAt
-// : 
+// :
 // "2024-03-19T22:50:00.413Z"
 // description
-// : 
+// :
 // "Se alquila un fantástico apartamento en una de las mejores zonas de Madrid. El piso consta de tres dormitorios dobles distribuidos en dos camas de matrimonio y en dos camas individuales.Hay dos baños.La cocina esta totalmente equipada con todo el menaje necesario para hacer la estancia lo mas cómoda y practica posible.El equipamiento consiste en lavadora,secadora,microondas.. El apartamento dispone de un gran salon totalmente independiente con tv ,sofá,butacas y una mesa de comedor con sillas. El piso se encuentra en un edificio moderno, en una tercera planta con ascensor, exterior y con porteria 24 horas. La casa cuenta con piscina de verano, internet, aire acondicionado,... aparcamiento opcional en el mismo edificio. gastos de preparacion del apartamento sabanas toallas,...20 € Gastos de limpieza del apartamento salida 30 € Opcionalmente dispone de aparcamiento en el edificio Opcionalmente se puede realizar transfer aero"
 // has_availability
-// : 
+// :
 // "t"
 // host_id
-// : 
+// :
 // null
 // imageCover
-// : 
+// :
 // "https://a0.muscache.com/im/pictures/d8d9966b-0e8d-4e08-be9e-02851ca1ca5d.jpg?im_w=1200"
 // instant_bookable
-// : 
+// :
 // "f"
 // latitude
-// : 
+// :
 // 40.25456
 // license
-// : 
+// :
 // ""
 // location
-// : 
+// :
 // ""
 // longitude
-// : 
+// :
 // -3.69505
 // neighborhood_overview
-// : 
+// :
 // "dispone de aparcamiento en el edificio Opcionalmente se puede realizar transfer aero"
 // pictures_url
-// : 
+// :
 // (3) ['1710888600412img4.jpeg', '1710888600412img3.jpeg', '1710888600412img2.webp']
 // place_name
-// : 
+// :
 // "Apartamento Arganzuela Planetari"
 // price
-// : 
+// :
 // 85
 // property_type
-// : 
+// :
 // ['Entire apartment']
 // ratingsAverage
-// : 
+// :
 // 4.5
 // ratingsQuantity
-// : 
+// :
 // 0
 // room_type
-// : 
+// :
 // "Entire home/apt"
 // startDates
-// : 
+// :
 // []
 // _id
-// : 
+// :
 // "66093633e87b01b89aeaf38a"
